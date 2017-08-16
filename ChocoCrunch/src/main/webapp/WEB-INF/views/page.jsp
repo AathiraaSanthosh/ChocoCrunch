@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -26,14 +26,20 @@
 <title>ChocoCrunch - ${title}</title>
 
 <script>
-	window
-	menu = '${title}';
+	window.menu = '${title}';
+	
+	window.contextRoot = '${contextRoot}';
 </script>
 <!-- Bootstrap Core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="${css}-myapp.css" rel="stylesheet">
+<link href="${css}/myapp.css" rel="stylesheet">
+
+
+<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+
+
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -60,12 +66,12 @@
 			</c:if>
 
 			<!-- Load only when user clicks about -->
-			<c:if test="${userClickAbout == true }">
+			<c:if test="${userClickAbout == true}">
 				<%@include file="about.jsp"%>
 			</c:if>
 
 			<!-- Load only when user clicks contact -->
-			<c:if test="${userClickContact == true }">
+			<c:if test="${userClickContact == true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
 			
