@@ -126,14 +126,12 @@ public class Product {
 	@Column(name = "is_active")
 	@JsonIgnore
 	private boolean active;
-	
 	@Column(name = "category_id")
+	
 	private int categoryId;
-  	
-	@Column(name = "supplier_id")
+  	@Column(name = "supplier_id")
 	@JsonIgnore
 	private int supplierId;
-	
 	private int purchases;
 	private int views;
 	

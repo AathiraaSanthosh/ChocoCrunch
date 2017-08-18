@@ -20,7 +20,7 @@
 
 					<c:if test="${userClickAllProducts == true}">
 						<script>
-							window.categoryId = ' ';
+							window.categoryId = '';
 						</script>
 
 
@@ -90,7 +90,7 @@
 
 					</table>
 
-]				</div>
+ 				</div>
 
 			</div>
 

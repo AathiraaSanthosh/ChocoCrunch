@@ -85,6 +85,7 @@ public class PageController {
 		
 		mv.addObject("categories", categoryDAO.list());
 		
+		
 		mv.addObject("userClickAllProducts",true);
 		
 		return mv;
