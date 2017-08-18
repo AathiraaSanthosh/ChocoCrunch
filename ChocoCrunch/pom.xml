@@ -58,6 +58,21 @@
     <artifactId>spring-webmvc</artifactId>
     <version>${spring.version}</version>
 </dependency>
+
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>${spring.version}</version>
+    <exclusions>
+    <exclusion>
+    	<groupId>commons-logging</groupId>
+    	<artifactId>commons-logging</artifactId>   
+    </exclusion>   
+    </exclusions>
+</dependency>
+    
+
+
   <!-- jstl -->
     
 <dependency>
@@ -65,11 +80,20 @@
     <artifactId>jstl</artifactId>
     <version>1.2</version>
 </dependency>
-    
-    
-    
-    
-    
+   
+		<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+<dependency>
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-classic</artifactId>
+    <version>1.2.3</version>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.slf4j/jcl-over-slf4j -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>jcl-over-slf4j</artifactId>
+    <version>1.7.10</version>
+</dependency>
   </dependencies>
   <build>
   	<plugins>

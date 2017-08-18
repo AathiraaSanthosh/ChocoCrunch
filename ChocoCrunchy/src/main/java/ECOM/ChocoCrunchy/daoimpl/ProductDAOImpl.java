@@ -12,137 +12,149 @@ import ECOM.ChochoCrunchy.dao.ProductDAO;
 import ECOM.ChocoCrunchy.dto.Product;
 
 
+
+
 @Repository("productDAO")
 @Transactional
-public class ProductDAOImpl implements ProductDAO 
-{
-	
-	
+public class ProductDAOImpl implements ProductDAO {
+
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	
+	/**
+	 * single
+	 * I
+	 */
 	private static List<Product> product = new ArrayList<>();
 	
 	
- /*
-  * Getting a single product based on ID
-  * */
+	
 	@Override
-	public Product get(int productId)
-	{
-		try
-		{
-			return sessionFactory.getCurrentSession().get(Product.class, Integer.valueOf(productId));
+	public Product get(int productId) {
+		
+		try {
+			return sessionFactory
+					.getCurrentSession()
+						.get(Product.class,Integer.valueOf(productId));
+			
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		
+		
+		return null;
+	}
+
+	/*
+	 * 
+	 * List
+	 * */	
+	@Override
+	public List<Product> list() {
+		
+		
+		return sessionFactory
+				.getCurrentSession()
+					.createQuery("FROM Product", Product.class)
+						.getResultList();
+	}
+   
+	/*
+	 * 
+	 * INSERT
+	 * */
+	
+	
+	@Override
+	public boolean add(Product product) {
+		try {
+			sessionFactory
+				.getCurrentSession()
+					.persist(product);
+			return true;
+			
 		}
 		catch(Exception ex)
 		{
-		ex.printStackTrace();
+			ex.printStackTrace();
 		}
-		return null;
+		return false;
 	}
-	/*
-	 * list
-	 * */
-	
-	@Override
-	public List<Product> list()
-	{
- 		return sessionFactory.getCurrentSession().createQuery("FROM Product",Product.class).getResultList();
-		
-	}
-	
-	/*
-	 * insert
-	 * */
-	
-	@Override
-	public boolean add(Product product) 
-	{
-		try {
-			sessionFactory.getCurrentSession().persist(product);
-            return true;
-		}
-		catch(Exception ex ) {
-			ex.printStackTrace(); 
-		}
-			return false;
-		}
-		
-	
-	/*
-	 * Updating a single category
-	 * */
 
+	
+	/*
+	 * UPADTE
+	 */
 	@Override
 	public boolean update(Product product) {
 		try {
-			sessionFactory.getCurrentSession().update(product);
-            return true;
+			sessionFactory
+			.getCurrentSession()
+				.update(product);
+			return true;
 		}
-		catch(Exception ex ) {
-			ex.printStackTrace(); 
+		catch(Exception ex) {
+			ex.printStackTrace();
 		}
-			return false;
-		}
-		
+		return false;
+	}
+
 	/*
+	 * 
 	 * delete
 	 * */
-		
+	
+	
 	@Override
 	public boolean delete(Product product) {
 		try {
-		product.setActive(false);
-		
-		//call the update method	
-            return this.update(product);
+			product.setActive(false);
+			//call the update method
+			return this.update(product);
 		}
 		catch(Exception ex) {
-			ex.printStackTrace(); 
-		}
-			return false;
+			ex.printStackTrace();
 		}
 		
-
-	
-	
-	@Override
-	public List<Product> listActiveProductByCategory(int categoryId) {
-		String selectActiveProductsByCategory = "FROM Product WHERE active = :active AND categoryId = :categoryId";
-		return sessionFactory
-				.getCurrentSession()
-				.createQuery(selectActiveProductsByCategory,Product.class)
-				.setParameter("active",true)
-				.setParameter("categoryId",categoryId)
-				.getResultList();
-	}
-	
-	
-		
-		
-
-	@Override
-	public List<Product> getLatestActiveProducts(int count) {
-		return sessionFactory
-				.getCurrentSession()
-				.createQuery("FROM Product WHERE active = :active ORDER BY id", Product.class)
-				.setParameter("active",true)
-				.setFirstResult(0)
-				.setMaxResults(count)
-				.getResultList();
+		return false;
 	}
 
-	
 	@Override
 	public List<Product> listActiveProducts() {
+
 		String selectActiveProducts = "FROM Product WHERE active = :active";
 		return sessionFactory
 				.getCurrentSession()
-					.createQuery(selectActiveProducts,Product.class)
-						.setParameter("active",true).getResultList();
+					.createQuery(selectActiveProducts, Product.class)
+						.setParameter("active", true)
+							.getResultList();
 	}
-	
-			
-}
 
+	@Override
+	public List<Product> listActiveProductsByCategory(int categoryId) {
+		String selectActiveProductsByCategory = "FROM Product WHERE active = :active AND categoryId = :categoryId";
+		return sessionFactory
+				.getCurrentSession()
+					.createQuery(selectActiveProductsByCategory, Product.class)
+						.setParameter("active", true)
+							.setParameter("categoryId",categoryId)
+							.getResultList();
+		
+	}
+
+	@Override
+	public List<Product> getLatestActiveProducts(int count) {
+		
+		return sessionFactory
+				.getCurrentSession()
+					.createQuery("FROM Product WHERE active = :active ORDER BY id", Product.class)
+						.setParameter("active", true)
+							.setFirstResult(0)
+								.setMaxResults(count)
+									.getResultList();
+		
+	}
+
+}

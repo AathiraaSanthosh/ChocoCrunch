@@ -37,7 +37,7 @@
 <link href="${css}/myapp.css" rel="stylesheet">
 
 
-<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+<%-- <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet"> --%>
 
 
 
@@ -91,6 +91,13 @@
 
 		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
+		
+		
+			<script src="${js}/jquery.dataTables.js"></script>
+			
+			
+			<script src="${js}/dataTables.bootstrap.js"></script>
+			
 
 		<!-- Self coded javascript -->
 		<script src="${js}/myapp.js"></script>

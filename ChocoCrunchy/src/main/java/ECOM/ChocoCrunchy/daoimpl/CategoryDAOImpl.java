@@ -1,6 +1,7 @@
 package ECOM.ChocoCrunchy.daoimpl;
 
 import java.util.List;
+import java.util.ArrayList;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -19,7 +20,7 @@ public class CategoryDAOImpl implements CategoryDAO
 	
 	@Autowired
 	private SessionFactory sessionFactory;
-	
+    private static List<Category> categories = new ArrayList<>();
 
 	@Override
 	public List<Category> list() {
@@ -41,7 +42,7 @@ public class CategoryDAOImpl implements CategoryDAO
 		}
 
 	@Override
-	
+	@Transactional
 	public boolean add(Category category) {
 		try {
 			sessionFactory.getCurrentSession().persist(category);
@@ -58,6 +59,7 @@ public class CategoryDAOImpl implements CategoryDAO
 	 * */
 
 	@Override
+	@Transactional
 	public boolean update(Category category) {
 		try {
 			sessionFactory.getCurrentSession().update(category);
@@ -71,6 +73,7 @@ public class CategoryDAOImpl implements CategoryDAO
 	}
 		
 	@Override
+	@Transactional
 	public boolean delete(Category category) {
 		
 		category.setActive(false);

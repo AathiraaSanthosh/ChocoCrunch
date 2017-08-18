@@ -28,36 +28,7 @@ public class ProductTestCase {
 	}
 
 
-	/*@Test
-	public void testCRUDProduct() {
-	create operation
-		product = new Product();
 
-		product.setName("DreamChocolate");
-		product.setBrand("Cadbury");
-		product.setDescription("Melts in mouth with tremoundouse feel!");
-		product.setUnitPrice(800);
-		product.setActive(true);
-		product.setCategoryId(5);
-		product.setSupplierId(2);
-		
-
-		assertEquals("Something went wrong while inserting a new product!", true, productDAO.add(product));
-
-		
-		//reading and updating the category
-		product = productDAO.get(2);
-        product.setName("Ferrero-Rocher");
-		
-		assertEquals("Something went wrong while updating a new product!", true, productDAO.update(product));
-		assertEquals("Something went wrong while deleting a new product!", true, productDAO.delete(product));
-		
-		
-		//list
-		assertEquals("Something went wrong while fetching the list of  products!", 6, productDAO.list().size());
-		
-	}
-}*/
 
 @Test
 public void testListActiveProducts()
@@ -65,13 +36,7 @@ public void testListActiveProducts()
 	assertEquals("Something went wrong while fetching the list of  products!", 5, productDAO.listActiveProducts().size());	
 }
 
-@Test
-public void testListActiveProductsByCategory()
-{
-	assertEquals("Something went wrong while fetching the list of  products!", 3, productDAO.listActiveProductByCategory(3).size());	
-	assertEquals("Something went wrong while fetching the list of  products!", 2, productDAO.listActiveProductByCategory(1).size());	
 
-}
 
 
 @Test
