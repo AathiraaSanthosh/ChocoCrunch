@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="container">
 	<div class="row">
 		<!-- Would be to display sidebar -->
@@ -14,11 +15,9 @@
 			<!-- Added breadcrumb component -->
 
 			<div class="row">
-				<!--  added breadcrumb component -->
-				<div class="col-lg-12">
+			<div class="col-lg-12">
 
-
-					<c:if test="${userClickAllProducts == true}">
+	<c:if test="${userClickAllProducts == true}">
 						<script>
 							window.categoryId = '';
 						</script>

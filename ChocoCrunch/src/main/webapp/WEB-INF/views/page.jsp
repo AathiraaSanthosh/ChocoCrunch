@@ -33,12 +33,15 @@
 <!-- Bootstrap Core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
+
+<!-- Bootstrap Readable Theme -->
+<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet"> 
+
+<!-- Bootstrap Datatables -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet"> 
+
 <!-- Custom CSS -->
 <link href="${css}/myapp.css" rel="stylesheet">
-
-
-<%-- <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet"> --%>
-
 
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -80,10 +83,17 @@
 				<%@include file="listProducts.jsp"%>
 			</c:if>
 			
+			<!-- Load only when user clicks show product -->
+			<c:if test="${userClickShowProducts == true}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
+			
+			
+			
 		</div>
 
 
-		<!-- Footer -->
+		<!-- Footer comes here -->
 		<%@include file="./shared/footer.jsp"%>
 
 		<!-- jQuery -->
@@ -92,10 +102,10 @@
 		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
 		
-		
+		<!-- DataTable Plugin -->
 			<script src="${js}/jquery.dataTables.js"></script>
 			
-			
+			<!-- DataTable Bootstrap Script-->
 			<script src="${js}/dataTables.bootstrap.js"></script>
 			
 

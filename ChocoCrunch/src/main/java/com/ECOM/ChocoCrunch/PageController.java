@@ -21,8 +21,6 @@ public class PageController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(PageController.class);
 	
-	
-	
 	@Autowired
 	private CategoryDAO categoryDAO;
 	
@@ -138,5 +136,26 @@ public class PageController {
 	}
 	
 	
+	 /* Viewing a single product
+	 *
+	 */
 	
+	
+	@RequestMapping(value = "/show/{id}/product")
+	public ModelAndView showSingleProduct(@PathVariable int id)
+	{
+	ModelAndView mv = new  ModelAndView("page");
+	Product product = productDAO.get(id);
+ 	
+	//update the view count
+	product.setViews(product.getViews() + 1);
+ 	productDAO.update(product);
+ 	
+ 	//---------------------------------------
+ 	mv.addObject("title" ,  product.getName());
+ 	mv.addObject("product" ,  product);
+ 	
+ 	mv.addObject("userClickShowProduct", true);
+	return mv;
 }
+	}
