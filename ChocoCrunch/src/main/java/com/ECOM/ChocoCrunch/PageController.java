@@ -31,8 +31,11 @@ public class PageController {
 	public ModelAndView index()
 	{
 		ModelAndView mv=new ModelAndView("page");
-		
 		mv.addObject("title","Home");
+		
+		logger.info("Inside PageController index method - INFO");
+		logger.debug("Inside PageController index method - DEBUG");
+		
 		//passing the list of categories
 		
 		logger.info("Inside PageController index method - INFO");
@@ -139,7 +142,7 @@ public class PageController {
 	 /* Viewing a single product
 	 *
 	 */
-	
+	/*
 	
 	@RequestMapping(value = "/show/{id}/product")
 	public ModelAndView showSingleProduct(@PathVariable int id)
@@ -157,5 +160,5 @@ public class PageController {
  	
  	mv.addObject("userClickShowProduct", true);
 	return mv;
-}
+}*/
 	}
