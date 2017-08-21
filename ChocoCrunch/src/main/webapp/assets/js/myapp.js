@@ -10,11 +10,11 @@ $(function() {
 	break;
 	
 	case 'All Products':
-		$('#manageProducts').addClass('active');
+		$('#listProducts').addClass('active');
 		break;
 		
 	case 'Manage Products':
-		$('#ListProducts').addClass('active');
+		$('#manageProducts').addClass('active');
 		break;
 		
 		
@@ -76,6 +76,7 @@ var $table= $('#productListTable');
 				},
 				{
 					data: 'quantity',
+					bSortable: true,
 					mRender: function(data, type, row) {
 						
 						if(data < 1) {

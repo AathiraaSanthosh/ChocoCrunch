@@ -37,9 +37,10 @@
 <!-- Bootstrap Readable Theme -->
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet"> 
 
-<!-- Bootstrap Datatables -->
+<%-- <!-- Bootstrap Datatables -->
 <link href="${css}/dataTables.bootstrap.css" rel="stylesheet"> 
-
+ --%>
+ <link href="${css}/jquery.datatables.min.css" rel="stylesheet">
 <!-- Custom CSS -->
 <link href="${css}/myapp.css" rel="stylesheet">
 
