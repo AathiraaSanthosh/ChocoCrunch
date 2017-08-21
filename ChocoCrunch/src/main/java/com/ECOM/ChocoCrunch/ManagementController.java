@@ -2,6 +2,7 @@ package com.ECOM.ChocoCrunch;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -18,6 +19,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import ECOM.ChochoCrunchy.dao.CategoryDAO;
 import ECOM.ChochoCrunchy.dao.ProductDAO;
+import ECOM.ChocoCrunch.util.FileUploadUtility;
+import ECOM.ChocoCrunch.validator.ProductValidator;
 import ECOM.ChocoCrunchy.dto.Category;
 import ECOM.ChocoCrunchy.dto.Product;
 
@@ -61,7 +64,11 @@ public class ManagementController {
 	
 	//handling product submission
 	@RequestMapping(value = "/products", method = RequestMethod.POST)
-public String handleProductSubmission(@Valid @ModelAttribute("product") Product mProduct,BindingResult results, Model model ) {
+public String handleProductSubmission(@Valid @ModelAttribute("product") Product mProduct,BindingResult results, Model model,HttpServletRequest request ) {
+		
+		new ProductValidator().validate(mProduct,results);
+		
+		
 		
 		//check if there are any errors
 		if(results.hasErrors())
@@ -76,6 +83,15 @@ public String handleProductSubmission(@Valid @ModelAttribute("product") Product 
 		
 		//create a new product record
 		productDAO.add(mProduct);
+		
+		
+		if(!mProduct.getFile().getOriginalFilename().equals("")) 
+		{
+			FileUploadUtility.uploadFile(request,mProduct.getFile(),mProduct.getCode());
+		}
+		
+		
+		
 		
 		return "redirect:/manage/products?operation=product";
 	}
