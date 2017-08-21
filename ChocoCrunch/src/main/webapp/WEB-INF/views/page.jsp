@@ -84,7 +84,7 @@
 			</c:if>
 			
 			<!-- Load only when user clicks show product -->
-			<c:if test="${userClickShowProducts == true}">
+			<c:if test="${userClickShowProduct == true}">
 				<%@include file="singleProduct.jsp"%>
 			</c:if>
 			

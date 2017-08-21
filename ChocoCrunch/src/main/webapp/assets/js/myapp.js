@@ -40,7 +40,7 @@ var $table= $('#productListTable');
 			jsonUrl = window.contextRoot + '/json/data/category/'+ window.categoryId +'/products';
 			
 		}
-		console.log('jsonUrl       ---------------------- '+jsonUrl);
+	
 		$table.DataTable( {
 			
 			lengthMenu: [ [3,5,10,-1],['3 Records','5 Records','10 Records','All Records']],
