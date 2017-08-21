@@ -52,7 +52,7 @@
 <h1>${error Title }</h1>
 <hr/>
 
-<blockquote>
+<blockquote style = "word-wrap:break-word">
 ${errorDescription}
 </blockquote>
 </div>
