@@ -34,6 +34,7 @@ method="POST" >
 <label class = "control-label col-md-4 " for = "name">Enter Product Name:</label>
 <div class = "col-md-8">
 <sf:input type = "text" path="name" id = "name" placeholder = "Product Name" class = "form-control"/>
+<sf:errors path="name" cssClass="help-block" element="em"/>
 </div>
 </div>
 
@@ -42,6 +43,7 @@ method="POST" >
 <label class = "control-label col-md-4 " for = "brand">Enter Brand Name:</label>
 <div class = "col-md-8">
 <sf:input type = "text" path="brand" id = "brand" placeholder = "Brand Name" class = "form-control"/>
+<sf:errors path="brand" cssClass="help-block" element="em"/>
 </div>
 </div>
 
@@ -49,6 +51,7 @@ method="POST" >
 <label class = "control-label col-md-4 " for = "description">Product Description:</label>
 <div class = "col-md-8">
 <sf:textarea path="description" id = "description" rows="4" placeholder = "Write a Description for the product" class = "form-control"/>
+<sf:errors path="description" cssClass="help-block" element="em"/>
 </div>
 </div>
 
@@ -56,11 +59,12 @@ method="POST" >
 <label class = "control-label col-md-4 " for = "unitPrice">Enter the unit Price:</label>
 <div class = "col-md-8">
 <sf:input type="number" path="unitPrice" id = "unitPrice"  placeholder = "unitPrice In &#8377;" class = "form-control"/>
+<sf:errors path="unitPrice" cssClass="help-block" element="em"/>
 </div>
 </div>
 
 <div class = "form-group">
-<label class = "control-label col-md-4 " for = "unitPrice">Quantity Available:</label>
+<label class = "control-label col-md-4 " for = "quantity">Quantity Available:</label>
 <div class = "col-md-8">
 <sf:input type="number" path="quantity" id = "quantity"  placeholder = "Quantity Available" class = "form-control"/>
 </div>

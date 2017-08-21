@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Min;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -111,23 +113,24 @@ public class Product {
 	private int id;
 	private String code;
 	
+	@NotBlank(message = "Please enter the Product Name!")
 	private String name;
-	
-	private String brand;
+	@NotBlank(message = "Please enter the Brand Name!")
+		private String brand;
 	@JsonIgnore
+	@NotBlank(message = "Please enter the description for the Product !")
 	private String description;
 	
 	@Column(name = "unit_price")
-	@Min(value=1, message= "The price cannot be less than 1")
+	@Min(value=1,message="The price cannot be less than 1!")
 	private double unitPrice;
-	
 	private int quantity;
 	
 	@Column(name = "is_active")
 	@JsonIgnore
 	private boolean active;
 	@Column(name = "category_id")
-	
+	@JsonIgnore
 	private int categoryId;
   	@Column(name = "supplier_id")
 	@JsonIgnore
