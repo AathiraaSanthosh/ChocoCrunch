@@ -112,4 +112,117 @@ itemValue="id"
 </div>
 </div>
 </div>
+
+<div class="row">
+
+<div class="col-xs-12">
+<h3>Available Products</h3>
+<hr/>
+</div>
+<div class="col-xs-12">
+<div style="overflow:auto">
+<!-- Products table for admin -->
+<table id="adminProductsTable"class="table table-striped table-bordered">
+
+<thread>
+<tr>
+<th>Id</th>
+<th>&#160;</th>
+<th>Name</th>
+<th>Quantity</th>
+<th>Unit Price</th>
+<th>Active</th>
+<th>Edit</th>
+</tr>
+</thread>
+
+<tbody>
+<tr>
+<td>4</td>
+<td>
+<img class="adminDataTableImg" src="${contextRoot}/resources/images/A14.jpg"
+alt="Erugira"/>
+
+</td>
+<td>Erugira</td>
+<td>4</td>
+<td>&#8377;234.00/-</td>
+<td>
+<!-- toggle Switch -->
+<label class="switch">
+<input type="checkbox" checked="checked" value="4"/>
+<div class="slider"></div>
+</label>
+
+</td>
+<td>
+<a href="${contextRoot}/manage/4/product" class="btn btn-warning"></a> 
+<span class="glyphicon glyphicon-pencil"></span>
+</a>
+</td>
+
+
+</tr>
+
+
+<tr>
+<td>4</td>
+<td>
+<img class="adminDataTableImg" src="${contextRoot}/resources/images/A14.jpg"
+alt="Erugira"/>
+
+</td>
+<td>Erugira</td>
+<td>4</td>
+<td>&#8377;234.00/-</td>
+<td>
+<!-- toggle Switch -->
+<label class="switch">
+<input type="checkbox"  value="4"/>
+<div class="slider"></div>
+</label>
+
+</td>
+<td>
+<a href="${contextRoot}/manage/4/product" class="btn btn-warning"></a> 
+<span class="glyphicon glyphicon-pencil"></span>
+</a>
+</td>
+
+
+</tr>
+
+
+
+
+</tbody>
+
+<tfoot>
+<tr>
+<th>Id</th>
+<th>&#160;</th>
+<th>Name</th>
+<th>Quantity</th>
+<th>Unit Price</th>
+<th>Active</th>
+<th>Edit</th>
+</tr>
+</tfoot>
+</table>
+
+
+
+
+
+
+</table>
+
+
+</div>
+</div>
+
+
+</div>
+
+
 </div>

@@ -48,7 +48,7 @@ public class CategoryDAOImpl implements CategoryDAO
 			sessionFactory.getCurrentSession().persist(category);
             return true;
 		}
-		catch(Exception ex ) {
+		catch(Exception ex) {
 			ex.printStackTrace(); 
 			return false;
 		}
@@ -56,7 +56,8 @@ public class CategoryDAOImpl implements CategoryDAO
 	}
 	/*
 	 * Updating a single category
-	 * */
+	 *
+	 */
 
 	@Override
 	@Transactional
