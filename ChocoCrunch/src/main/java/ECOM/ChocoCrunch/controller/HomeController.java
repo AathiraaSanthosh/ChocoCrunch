@@ -1,4 +1,6 @@
-package com.ECOM.ChocoCrunch;
+package ECOM.ChocoCrunch.controller;
+
+
 
 import java.util.List;
 
@@ -8,14 +10,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import ECOM.ChochoCrunchy.dao.ProductDAO;
+import ECOM.ChocoCrunchy.dao.ProductDAO;
 import ECOM.ChocoCrunchy.dto.Product;
-
-
 
 @Controller
 @RequestMapping("/json/data")
-public class JsonDataController {
+public class HomeController {
 	
 	@Autowired
 	private ProductDAO productDAO;
@@ -28,6 +28,17 @@ public class JsonDataController {
 		return productDAO.listActiveProducts();
 	}
 	
+	
+
+	@RequestMapping("/admin/all/products")
+	@ResponseBody
+	public List<Product> getAllProductsForAdmin() {
+		
+		return productDAO.list();
+	}
+	
+	
+	
 	@RequestMapping("/category/{id}/products")
 	@ResponseBody
 	public List<Product> getProductsByCategory(@PathVariable int id) {
@@ -35,8 +46,5 @@ public class JsonDataController {
 		
 		return productDAO.listActiveProductsByCategory(id);
 	}
-
-	
-	
 
 }

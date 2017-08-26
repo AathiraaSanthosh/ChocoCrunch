@@ -13,7 +13,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan("ECOM.ChocoCrunchy.dto")
+@ComponentScan(basePackages={"ECOM.ChocoCrunchy.dto"})
 @EnableTransactionManagement
 public class HibernateConfig {
 
@@ -25,7 +25,7 @@ public class HibernateConfig {
 	private final static String DATABASE_PASSWORD = "";
 
 	// dataSource bean will be available
-	@Bean
+	@Bean("dataSource")
 	public DataSource getDataSource() {
 
 		BasicDataSource dataSource = new BasicDataSource();
@@ -51,10 +51,11 @@ public class HibernateConfig {
 
 	private Properties getHibernateProperties() {
 		Properties properties = new Properties();
-		properties.put("hibernate.hbm2ddl.auto", "update");
+	
 		properties.put("hibernate.dialect", DATABASE_DIALECT);
 		properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.format_sql", "true");
+		properties.put("hibernate.hbm2ddl.auto", "update");
 
 		return properties;
 

@@ -18,13 +18,13 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img class="slide-image" src="${images}/front1.jpg" style="height:800;width:300" alt="">
+                                    <img class="slide-image" src="${images}/front1.jpg" style="height:300px;width:800px;" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="${images}/front2.jpg" style="height:300;width:800" alt="">
+                                    <img class="slide-image" src="${images}/front2.jpg" style="height:300px;width:800px;" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="${images}/front3.jpg" style="height:300;width:800" alt="">
+                                    <img class="slide-image" src="${images}/front3.jpg" style="height:300px;width:800px;" alt="">
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">

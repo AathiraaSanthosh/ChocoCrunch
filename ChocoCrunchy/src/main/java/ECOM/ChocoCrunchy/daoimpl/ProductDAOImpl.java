@@ -1,5 +1,7 @@
 package ECOM.ChocoCrunchy.daoimpl;
 
+
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,10 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import ECOM.ChochoCrunchy.dao.ProductDAO;
+import ECOM.ChocoCrunchy.dao.ProductDAO;
 import ECOM.ChocoCrunchy.dto.Product;
-
-
 
 
 @Repository("productDAO")
@@ -34,9 +34,7 @@ public class ProductDAOImpl implements ProductDAO {
 	public Product get(int productId) {
 		
 		try {
-			return sessionFactory
-					.getCurrentSession()
-						.get(Product.class,Integer.valueOf(productId));
+			return sessionFactory.getCurrentSession().get(Product.class,Integer.valueOf(productId));
 			
 		}
 		catch(Exception ex) {

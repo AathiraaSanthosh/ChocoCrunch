@@ -10,27 +10,26 @@
   <name>ChocoCrunch Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
- <!-- Version information will be stored here --> 
-  <properties>
+ <properties>
   	<javaee.version>7.0</javaee.version>
   	<spring.version>4.3.6.RELEASE</spring.version>
+  	<spring.security.version>4.2.2.RELEASE</spring.security.version>
   </properties>
   
   
   
   <dependencies>
   
-  <!-- Link backend project with front end -->
+  <!-- Link backend project -->
   <dependency>
-   <groupId>ECOM</groupId>
+  
+  <groupId>ECOM</groupId>
 	<artifactId>ChocoCrunchy</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
   
   </dependency>
   
-  
-  
-  <!-- javaee EE-->
+  <!-- javaee api -->
 <dependency>
     <groupId>javax</groupId>
     <artifactId>javaee-api</artifactId>
@@ -49,16 +48,10 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <!-- Spring -->
-    
-    
-    
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-webmvc</artifactId>
-    <version>${spring.version}</version>
-</dependency>
 
+<!-- spring -->
+
+    
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-core</artifactId>
@@ -72,6 +65,13 @@
 </dependency>
     
 
+    
+    
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>${spring.version}</version>
+</dependency>
 
   <!-- jstl -->
     
@@ -80,20 +80,35 @@
     <artifactId>jstl</artifactId>
     <version>1.2</version>
 </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.springframework.webflow/spring-webflow -->
+<dependency>
+    <groupId>org.springframework.webflow</groupId>
+    <artifactId>spring-webflow</artifactId>
+    <version>2.4.4.RELEASE</version>
+</dependency>
+    
+    <!-- Spring security -->
+   <dependency>
+   		<groupId>org.springframework.security</groupId>
+   		<artifactId>spring-security-config</artifactId>
+   		<version>${spring.security.version}</version>
+   </dependency>
+    
+    <dependency>
+   		<groupId>org.springframework.security</groupId>
+   		<artifactId>spring-security-web</artifactId>
+   		<version>${spring.security.version}</version>
+   </dependency>
    
-		<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
-<dependency>
-    <groupId>ch.qos.logback</groupId>
-    <artifactId>logback-classic</artifactId>
-    <version>1.2.3</version>
-    <scope>test</scope>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.slf4j/jcl-over-slf4j -->
-<dependency>
-    <groupId>org.slf4j</groupId>
-    <artifactId>jcl-over-slf4j</artifactId>
-    <version>1.7.10</version>
-</dependency>
+   <dependency>
+   		<groupId>org.springframework.security</groupId>
+   		<artifactId>spring-security-taglibs</artifactId>
+   		<version>${spring.security.version}</version>
+   </dependency>
+    
+    
+    
   </dependencies>
   <build>
   	<plugins>
@@ -113,6 +128,8 @@
   	
   	
   	</plugins>
+  	
+  	
     <finalName>ChocoCrunch</finalName>
   </build>
 </project>

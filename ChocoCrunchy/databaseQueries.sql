@@ -12,6 +12,7 @@ CREATE TABLE category(
 INSERT INTO category (name, description,image_url,is_active) VALUES ('crunchychocolates', 'Everlasting crunchy feel you experience!', 'CAT_1.png', true);
 INSERT INTO category (name, description,image_url,is_active) VALUES ('blackandwhite chocolates', 'delicious enjoyment in your life!', 'CAT_2.png', true);
 INSERT INTO category (name, description,image_url,is_active) VALUES ('chocolates', 'Fade away with chocolates!', 'CAT_3.png', true);
+INSERT INTO category (name, description,image_url,is_active) VALUES ('chocolates', 'Fade away with chocolates!', 'CAT_3.png', true);
 
 CREATE TABLE user_detail (
 	id IDENTITY,

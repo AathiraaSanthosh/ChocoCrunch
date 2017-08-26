@@ -1,9 +1,10 @@
-package ECOM.ChochoCrunchy.dao;
+package ECOM.ChocoCrunchy.dao;
+
+
 
 import java.util.List;
 
 import ECOM.ChocoCrunchy.dto.Product;
-
 
 public interface ProductDAO {
 
