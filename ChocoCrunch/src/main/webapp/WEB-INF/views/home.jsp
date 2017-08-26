@@ -18,13 +18,13 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img class="slide-image" src="${images}/front1.jpg" style="height:300px;width:800px;" alt="">
+                                    <img class="slide-image" src="${images}/front1.jpg" style="height:300px;width:900px;" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="${images}/front2.jpg" style="height:300px;width:800px;" alt="">
+                                    <img class="slide-image" src="${images}/front2.jpg" style="height:300px;width:900px;" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="${images}/front3.jpg" style="height:300px;width:800px;" alt="">
+                                    <img class="slide-image" src="${images}/front3.jpg" style="height:300px;width:900px;" alt="">
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -41,12 +41,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="${images}/prod1.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$24.99</h4>
-                                <h4><a href="#">First Product</a>
+                                <h4 class="pull-right">Rs.2199/-</h4>
+                                <h4><a href="#">Moon-Rocher</a>
                                 </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                                <p> There is nothing heavenly than gulping down a crunchy delicious chocolate! This rich, smooth and beautifully decorated chocolate arrangement is perfect to satiate the sweet tooth of all chocolate lovers.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">15 reviews</p>
@@ -63,12 +63,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="${images}/prod2.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$64.99</h4>
-                                <h4><a href="#">Second Product</a>
+                                <h4 class="pull-right">Rs.648/-</h4>
+                                <h4><a href="#">HandyChocos</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Square assorted handmade chocolates are just great to taste. Buy these exotic chocolates that too in a round glass vase which makes it a perfect gift item for your loved ones. Order from Ferns N Petals to get the best quality chocolates only.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">12 reviews</p>
@@ -85,12 +85,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="${images}/prod3.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$74.99</h4>
-                                <h4><a href="#">Third Product</a>
+                                <h4 class="pull-right">Rs.1330/-</h4>
+                                <h4><a href="#">ChocoLips</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>If you are looking for some differently shaped chocolates to gift your loved ones, order these lip shaped chocolates now! In this gift item, you can get some red and chocolate coloured lip shaped chocolates that will make some unique gift for them. So make your order now from chococrunch..</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">31 reviews</p>
@@ -107,12 +107,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="${images}/prod4.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$84.99</h4>
-                                <h4><a href="#">Fourth Product</a>
+                                <h4 class="pull-right">Rs.1220/-</h4>
+                                <h4><a href="#">DiaryMilk</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>Buy this arrangement of chocolates from ChocoCrunch to delight any one special to you. Here 30 Cadbury Dairy Milk Chocolates are arranged in two circular layers . This is a unique gift item. Make an order now to present it on the special day of your loved ones..</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">6 reviews</p>
@@ -129,12 +129,12 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src="${images}/prod5.jpg" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$94.99</h4>
-                                <h4><a href="#">Fifth Product</a>
+                                <h4 class="pull-right">Rs.500/-</h4>
+                                <h4><a href="#">LovelyCusions</a>
                                 </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p>On this valentine's day, make the love of your life yours forever. Declare your love with beautiful cushion and mug. It will warm their heart and bind the two of you together..</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">18 reviews</p>
@@ -149,13 +149,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Like this template?</a>
-                        </h4>
-                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                        <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
-                    </div>
-
+                   
                 </div>
 
             </div>

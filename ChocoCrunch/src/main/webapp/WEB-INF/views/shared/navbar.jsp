@@ -78,4 +78,6 @@
         </div>
         <!-- /.container -->
     </nav>
- 
+ <script>
+ window.userRole ='${userModel.role}';
+ </script>

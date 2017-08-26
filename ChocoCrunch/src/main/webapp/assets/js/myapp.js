@@ -101,7 +101,7 @@ $(function() {
 											+ window.contextRoot
 											+ '/show/'
 											+ data
-											+ '/product" class="btn btn-primary" ></a>';
+											+ '/product" class="btn btn-primary" ><span class="glyphicon glyphicon-eye-open"></span></a>';
 
 									if (userRole == 'ADMIN') {
 
@@ -109,18 +109,18 @@ $(function() {
 												+ window.contextRoot
 												+ '/manage/'
 												+ data
-												+ '/product" class="btn btn-warning"></a>';
+												+ '/product" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>';
 									} else { 
 
 										if (row.quantity < 1) {
-											str += '<ga href = "javascript:void(0)" class="glyphicon glyphicon-shopping-cart"></a>';
+											str += '<a href = "javascript:void(0)" class="btn btn-success disabled"><span class="glyphicon glyphicon-shopping-cart"></span></a>';
 										} else {
 
 											str += '<a href="'
 													+ window.contextRoot
 													+ '/cart/add/'
 													+ data
-													+ '/product" class="btn btn-success"></a>';
+													+ '/product" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span></a>';
 										}
 									}
 									return str;
